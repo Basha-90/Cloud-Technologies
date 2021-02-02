@@ -1,0 +1,28 @@
+version: "3.7"
+services:
+  flask:
+    container_name: flask
+    build: flask
+    restart: always
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./flask/src:/src
+      # - app-data:/src
+    environment:
+      FLASK_ENV: development
+    depends_on:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    restart: always
+    volumes:
+      # - ~/.local/data/mongo:/data/db
+      - mongo-db:/data/db
+    ports:
+      - "27017:27017"
+
+volumes:
+  mongo-db:
+  app-data:

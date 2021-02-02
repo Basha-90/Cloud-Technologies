@@ -22,7 +22,7 @@
 ### Docker File
 
 ### Container Registry
-- repository for container images like 
+- repository for container images like
 - private or public
 - Vulnerability Scanning
 - RBAC-role based access control (push and pull access control)
@@ -38,4 +38,7 @@
 
 # Storage
 ### Persistant Storage
-
+- Volumes are stored in a part of the host filesystem managed by Docker (/var/lib/docker/volumes/ on Linux)
+- These are managed by named volumes created as `docker create volumes db-data`
+- These volumes are mounted as `-v db-data:/data/db` in case of mongodb.
+- To persist the data, we can also mount an directory of the host system as `-v ~/.local/data/mongo:/data/db`
