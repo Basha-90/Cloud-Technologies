@@ -1,6 +1,6 @@
 # AWS Lambda and EC2
 
-Server-based Applications - EC2 and S3 (IaaS)
+Server-based Applications - EC2 and S3 (IaaS)  
 Cloud Native Applications - AWS Lambda (Microservices, Serverless, FaaS)
 
 EC2 requires provisioning and  management of the environment. Each EC2 instance runs not just a full copy of an operating system, but a virtual copy of all the hardware that the operating system needs to run (Virtualization).  In contrast, what AWS Lambda requires is enough system resources and dependencies to run a specific program (Containerization).
