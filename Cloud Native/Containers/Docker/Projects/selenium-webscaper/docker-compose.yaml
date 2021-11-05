@@ -2,10 +2,10 @@ version: "3.7"
 services:
   flask:
     container_name: flask
-    build: flask
+    image: hashmati/scraper
     restart: always
     ports:
-      - "5001:5000"
+      - "5000:5000"
     volumes:
       - ./flask/src:/src
       # - app-data:/src
