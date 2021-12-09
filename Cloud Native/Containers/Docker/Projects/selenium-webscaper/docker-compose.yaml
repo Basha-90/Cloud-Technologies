@@ -6,8 +6,8 @@ services:
     restart: always
     ports:
       - "5000:5000"
-    volumes:
-      - ./flask/src:/src
+    # volumes:
+      # - ./flask/src:/src
       # - app-data:/src
     environment:
       FLASK_ENV: development
@@ -25,4 +25,4 @@ services:
 
 volumes:
   mongo-db:
-  app-data:
+  # app-data:
